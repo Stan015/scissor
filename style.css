@@ -757,6 +757,7 @@ main .third_section {
     gap: 1rem;
     padding: 1rem 0;
     border-bottom: 1px solid #D6D6D6;
+    cursor: pointer;
 }
 
 .faq_list_item .faq {
@@ -768,7 +769,7 @@ main .third_section {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    cursor: pointer;
+    pointer-events: none;
 }
 
 .faq_list_item .faq h5 {
@@ -785,6 +786,16 @@ main .third_section {
 /* to be expanded */
 .faq_details {
     display: inline-block !important;
+}
+
+@keyframes faqDetailsAnimation {
+    from {
+        transform: translateY(-1rem);
+    }
+
+    to {
+        transform: translateY(0);
+    }
 }
 /*  */
 
@@ -813,6 +824,26 @@ main .third_section {
     background-color: #141414;
     transform: rotate(90deg);
     position: absolute;
+}
+
+@keyframes rotateVertical {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(90deg);
+    }
+}
+
+@keyframes rotateHorizontal {
+    from {
+        transform: rotate(90deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
 }
 /*  */
 
