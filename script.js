@@ -51,3 +51,79 @@ function toggleFaqDetails() {
 
 toggleFaqDetails();
 //
+
+//animations on page scroll
+//from bottom to top
+const observer = new IntersectionObserver (entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add('bottom_to_top');
+        } else {
+            entry.target.classList.remove('bottom_to_top');
+        }
+    })
+});
+
+observer.observe(document.querySelector('.first_section h2'));
+observer.observe(document.querySelector('.first_section div'));
+observer.observe(document.querySelector('.choose_scissor'));
+observer.observe(document.querySelectorAll('.list_item')[2]);
+observer.observe(document.querySelectorAll('.list_item')[3]);
+observer.observe(document.querySelector('.professional_price'));
+observer.observe(document.querySelector('.socials_div'));
+observer.observe(document.querySelectorAll('.ftr_list_div div')[5]);
+observer.observe(document.querySelectorAll('.ftr_list_div div')[6]);
+
+
+//from left to right
+const observerTwo = new IntersectionObserver (entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add('left_to_right');
+        } else {
+            entry.target.classList.remove('left_to_right');
+        }
+    })
+});
+
+observerTwo.observe(document.querySelectorAll('.list_item')[0]);
+observerTwo.observe(document.querySelector('.child_1'));
+observerTwo.observe(document.querySelector('.team_price'));
+observerTwo.observe(document.querySelectorAll('.buttons_div button')[0]);
+observerTwo.observe(document.querySelector('.faq_section h2'));
+observerTwo.observe(document.querySelectorAll('.ftr_list_div div')[0]);
+observerTwo.observe(document.querySelectorAll('.ftr_list_div div')[4]);
+
+//from right to left
+const observerThree = new IntersectionObserver (entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add('right_to_left');
+        } else {
+            entry.target.classList.remove('right_to_left');
+        }
+    })
+});
+
+observerThree.observe(document.querySelectorAll('.list_item')[1]);
+observerThree.observe(document.querySelector('.basic_price'));
+observerThree.observe(document.querySelectorAll('.buttons_div button')[1]);
+observerThree.observe(document.querySelectorAll('.ftr_list_div div')[3]);
+observerThree.observe(document.querySelector('.ftr_second_child'));
+
+//from opacity 0 to 1
+const observerFour = new IntersectionObserver (entries => {
+    entries.forEach(entry => {
+        if(entry.isIntersecting) {
+            entry.target.classList.add('appear');
+        } else {
+            entry.target.classList.remove('appear');
+        }
+    })
+});
+
+observerFour.observe(document.querySelector('#url_shortener_form'));
+observerFour.observe(document.querySelectorAll('.ftr_list_div div')[1]);
+observerFour.observe(document.querySelectorAll('.ftr_list_div div')[2]);
+
+//

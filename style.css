@@ -152,6 +152,7 @@ nav ul li a {
     display:  flex;
     flex-direction: column;
     align-items: center;
+    animation: fromBottomToTop 800ms ease-out;
 }
 
 .first_child .title h1 {
@@ -175,6 +176,28 @@ nav ul li a {
     background-position: center;
     position: relative;
     top: -1.5rem;
+    animation: brushBlob 2000ms ease-out;
+    /* transition-delay: 400ms; */
+}
+
+@keyframes brushBlob {
+    from {
+        transform: translateY(2rem);
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+    
+    60% {
+        opacity: 0.9;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
 
 .hero .first_child p {
@@ -183,6 +206,7 @@ nav ul li a {
     text-align: center;
     line-height: 2rem;
     margin-bottom: 2rem;
+    animation: appear 1000ms ease-out;
 }
 
 .hero .first_child .buttons_div {
@@ -205,12 +229,13 @@ nav ul li a {
 .buttons_div .sign_up {
     color: var(--clr-action);
     background-color: var(--bg-action);
+    animation: fromLeftToRight 2000ms ease;
 }
 
 .buttons_div .learn_more {
     color: #0065FE;
     background-color: #FFFFFF;
-
+    animation: fromRightToLeft 2000ms ease;
 }
 
 .hero .second_child {
@@ -252,11 +277,23 @@ nav ul li a {
 
     & img:not(.arrow_forward) {
         width: 5rem;
+        animation: growBig 2000ms ease-out;
     }
 
     .arrow_forward {
         width: 4rem;
         padding: 0 1rem;
+    }
+}
+
+
+@keyframes growBig {
+    from {
+        width: 3rem;
+    }
+
+    to {
+        width: 5rem;
     }
 }
 
@@ -291,6 +328,17 @@ nav ul li a {
     border-radius: 50%;
     background: linear-gradient(180deg, rgba(226, 233, 240, 0.70) 10.68%, rgba(220, 228, 235, 0.70) 44.01%, rgba(226, 233, 240, 0.00) 100%);
     box-shadow: 0px 4px 4px 0px rgba(18, 36, 89, 0.35);
+    animation: growWide 2000ms ease-out;
+}
+
+@keyframes growWide {
+    from {
+        width: 60%;
+    }
+
+    to {
+        width: 90%;
+    }
 }
 
 main {
@@ -489,6 +537,7 @@ main .third_section {
     width: 25rem;
     height: 39rem;
     background: linear-gradient(180deg, #1E3448 99.99%, rgba(30, 52, 72, 0.00) 100%);
+    z-index: 1;
 }
 
 .professional_price h4, 
@@ -1044,3 +1093,76 @@ footer::after {
     border-right: 2px solid #141414;
     padding-right: 1rem;
 }
+
+/* animations on page load and scroll */
+
+.bottom_to_top {
+    animation: fromBottomToTop 1000ms ease-out;
+}
+
+.left_to_right {
+    animation: fromLeftToRight 1000ms ease-out;
+}
+
+.right_to_left {
+    animation: fromRightToLeft 1000ms ease-out;
+}
+
+.appear {
+    animation: appear 1000ms ease-out;
+}
+
+@keyframes fromBottomToTop {
+    from {
+        transform: translateY(4rem);
+        /* opacity: 0; */
+    }
+    /* 40% {
+        opacity: 0.6;
+    } */
+
+    to {
+        transform: translateY(0);
+        /* opacity: 1; */
+    }
+}
+
+@keyframes fromLeftToRight {
+    from {
+        transform: translateX(-3rem);
+        /* opacity: 0; */
+    }
+
+    to {
+        transform: translateX(0);
+        /* opacity: 1; */
+    }
+}
+
+@keyframes fromRightToLeft {
+    from {
+        transform: translateX(3rem);
+        /* opacity: 0; */
+    }
+
+    to {
+        transform: translateX(0);
+        /* opacity: 1; */
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 0.6;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/*  */
