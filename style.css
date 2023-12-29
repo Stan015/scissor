@@ -61,17 +61,21 @@ header > div {
     align-items: center;
     gap: 1rem;
     margin: 0 10%;
-    z-index: 2;
+    z-index: 3;
 }
 
 .logo {
     min-width: 10rem;
     min-height: 2.5rem;
 }
-/* 
+
 nav {
     display: flex;
-} */
+}
+
+.mobile_nav_div {
+    display: none;
+}
 
 nav ul {
     display: flex;
@@ -127,6 +131,12 @@ nav ul li a {
         background-color: #005AE2;
     }
 }
+
+/* burger menu */
+.burger_div {
+    display: none;
+}
+/*  */
 
 .hero {
     display: flex;
@@ -467,13 +477,6 @@ main .third_section {
     align-items: center;
     gap: 4rem;
     margin-bottom: 4rem;
-}
-
-main .third_section {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 4rem;
 }
 
 .third_section .child_1 {
@@ -1092,6 +1095,251 @@ footer::after {
 .ftr_second_child .security {
     border-right: 2px solid #141414;
     padding-right: 1rem;
+}
+
+@media screen and (max-width: 768px) {
+    header > div {
+        display: none;
+    }
+
+    .mobile_nav_div {
+        display: flex;
+        width: 90%;
+        margin: 0 5%;
+        position: relative;
+        height: 6rem;
+        justify-content: space-between;
+        align-items: center;
+        gap: 1rem;
+        margin: 0 5%;
+        z-index: 3;
+    }
+    
+    .mobile_nav_div .mobile_nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        justify-content: center;
+        
+    }
+
+    /* .mobile_nav .primary_nav {
+        display: flex;
+    } */
+
+    .mobile_nav .primary_nav ul {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    
+    /* burger menu */
+    .burger_div {
+        display: block;
+    }
+
+    .burger {
+        display: block;
+        height: 0.4rem;
+        width: 4rem;
+        background-color: #141414;
+        margin: 0.5rem 0;
+        border-radius: 0.5rem;
+    }
+    /*  */
+
+    .hero .first_child {
+        margin: 0 5%;
+    }
+    
+    .first_child .title h1 {
+        font-size: 2rem;
+        line-height: 5rem;
+        width: 40rem;
+    }
+    
+    .hero .first_child p {
+        width: 40rem;
+        margin-bottom: 1rem;
+    }
+
+    .hero .second_child {
+        width: 40rem;
+        margin: 0 5%;
+    }
+    
+    .hero .second_child .triangle_vector {
+        height: 15rem;
+        position: absolute;
+        left: 0.3rem;
+    }
+    
+    .second_child img + div {
+        width: 40rem;
+        height: 13rem;
+        padding: 2rem;
+    }
+
+    .hero .third_child {
+        height: 5rem;
+        width: 100%;
+    }
+    
+    .third_child .trapezoid {
+        border-bottom: 5rem solid #F8F7F7;
+    }
+    
+    .third_child .oval {
+        top: 0.5rem;
+    }
+
+    main .first_section {
+        flex-direction: column;
+        padding: 4rem 5%;
+    }
+    
+    .first_section h2 {
+        font-size: 1.5rem; 
+    }
+    
+    .first_section h2 br {
+        display: none;
+    }
+    
+    .first_section div {
+        gap: 1.5rem;
+    }
+    
+    .first_section div p {
+        font-size: 1rem;
+        gap: 0.2rem;
+        width: 9rem;
+    }
+    
+    .first_section div p span {
+        font-size: 1.5rem;
+    }
+    
+    main .second_section {
+        flex-direction: column;
+        align-items: center;
+        gap: 3rem;
+        padding: 3rem 5%;
+    }
+    
+    .second_section .choose_scissor {
+        align-items: center;
+        width: 27rem;
+    }
+    
+    .second_section .choose_scissor h2 {
+        font-size: 1.5rem;
+    }
+    
+    .second_section .choose_scissor h2::before {
+        height: 2rem;
+    }
+    
+    .second_section .choose_scissor p {
+        font-size: 1rem;
+        padding-left: 0;
+    }
+    
+    .second_section .list {
+        width: 43rem;
+        gap: 2rem;
+    }
+    
+    .second_section .list .list_item {
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .second_section .list .list_item h3 {
+        font-size: 1.2rem;
+    }
+    
+    .second_section .list .list_item p {
+        text-align: center;
+    }
+    
+    main .third_section {
+        margin: 0 5% 4rem 5%;
+    }
+
+    .third_section .child_1 h2 {
+        font-size: 1.5rem;
+    }
+    
+    .third_section .child_1 h2::before {
+        height: 2rem;
+    }
+
+    .third_section .price_list {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .price_list .basic_price {
+        border-radius: 1rem;
+        border: 2px solid #005AE2;
+    }
+    
+    .price_list .team_price {
+        border-radius: 1rem;
+        border: 2px solid #005AE2;
+    }
+    
+    #url_shortener_form {
+        margin: 0 5%;
+    } 
+    
+    .terms_of_service {
+        text-align: center;
+    }
+    
+    .faq_section h2 {
+        font-size: 1.5rem;
+    }
+    
+    .faq_section h2::before {
+        height: 2rem;
+    }
+    
+    .faq_list {
+        width: 30rem;
+    }
+
+    .faq_list_item .faq {
+        gap: 1rem;
+    }
+    
+    .link_optimization_section h2 {
+        font-size: 2rem;
+    }
+    
+    footer {
+        padding: 2rem 5% 4em 5%;
+    }
+
+    .ftr_first_child {
+        flex-direction: column;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    .ftr_list_div {
+        gap: 2rem;
+    }
+    
+    .ftr_list_div div {
+        width: 9rem;
+    }
+    
+    .ftr_second_child {
+        justify-content: center;
+    }
+    
 }
 
 /* animations on page load and scroll */
