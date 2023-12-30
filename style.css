@@ -51,9 +51,10 @@ header {
     linear-gradient(2.6turn, #eac81f37, #FFFFFF, #FFFFFF),
     linear-gradient(0.5turn, #06780837, #FFFFFF, #FFFFFF),
     linear-gradient(336deg, #FFFFFF, #FFFFFF, #d6050511);
+    position: relative;
 }
 
-header > div {
+header .desktop_nav_div {
     display: flex;
     width: 80%;
     height: 6rem;
@@ -1097,8 +1098,8 @@ footer::after {
     padding-right: 1rem;
 }
 
-@media screen and (max-width: 768px) {
-    header > div {
+@media screen and (min-width: 768px) and (max-width: 1238px) {
+    header .desktop_nav_div {
         display: none;
     }
 
@@ -1119,32 +1120,83 @@ footer::after {
         display: none;
         flex-direction: column;
         position: absolute;
-        justify-content: center;
-        
+        justify-content: space-between;
+        align-items: center;
+        width: 50%;
+        height: 100svh;
+        z-index: 3;
+        background-color: #FFFFFF;
+        right: -5%;
+        top: 0;
+        padding: 8rem 0;
+        gap: 6rem;
+        border-radius: 2rem 0 0 2rem;
     }
 
-    /* .mobile_nav .primary_nav {
-        display: flex;
-    } */
+    .show_mobile_nav {
+        display: flex !important;
+        animation: show_mobile_nav 200ms ease-out;
+    }
+
+    @keyframes show_mobile_nav {
+        from {
+            transform: translateX(6rem);
+        }
+
+        to {
+            transform: translateX(0);
+        }
+    }
+
+    .mobile_nav .primary_nav {
+        position: relative;
+    }
 
     .mobile_nav .primary_nav ul {
         display: flex;
         flex-direction: column;
+        align-items: flex-start;
         width: 100%;
+        gap: 2rem;
+    }
+
+    .mobile_nav .secondary_nav {
+        position: relative;
+    }
+
+    .mobile_nav .secondary_nav ul {
+        display: flex;
+        width: 100%;
+        gap: 2rem;
     }
     
     /* burger menu */
-    .burger_div {
-        display: block;
-    }
-
     .burger {
         display: block;
+        z-index: 4;
+    }
+
+    .burger_dash {
+        display: flex;
         height: 0.4rem;
         width: 4rem;
         background-color: #141414;
         margin: 0.5rem 0;
         border-radius: 0.5rem;
+    }
+
+    .burger_first_dash {
+        transform: rotate(45deg);
+        transition: transform 200ms ease-in;
+    }
+
+    .burger_second_dash {
+        display: none;
+    }
+
+    .burger_third_dash {
+        transform: rotate(-45deg);
+        transition: transform 200ms ease-in;
     }
     /*  */
 
