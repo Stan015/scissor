@@ -24,6 +24,7 @@ box-sizing: border-box;
 html, body {
     width: 100%;
     background-color: #FFFFFF;    
+    scroll-behavior: smooth;
 }
 
 a {
@@ -1216,12 +1217,13 @@ footer::after {
         margin: 0 5%;
         padding-top: 1.5rem;
         gap: 1rem;
+        justify-content: space-between;
     }
     
     .first_child .title h1 {
         font-size: 1.3rem;
         line-height: 2rem;
-        width: 18rem;
+        width: 18rem !important;
     }
 
     .title::after {
@@ -1251,7 +1253,7 @@ footer::after {
     .hero .second_child {
         width: 18rem;
         height: 12.5rem;
-        margin: 0 5%;
+        margin: 0 5% 20% 5%;
     }
     
     .hero .second_child .triangle_vector {
@@ -1361,7 +1363,7 @@ footer::after {
     
     .second_section .choose_scissor {
         align-items: center;
-        /* width: 27rem; */
+        width: 18rem;
     }
     
     .second_section .choose_scissor h2 {
@@ -1445,7 +1447,7 @@ footer::after {
         border-radius: 1rem;
         border: 2px solid #005AE2;
     }
-    
+
     .shorten_url::before {
         width: 100%;
     } 
@@ -1460,7 +1462,7 @@ footer::after {
         width: 18rem;
         gap: 1rem;
         padding: 1rem;
-        /* grid-template-columns: 7rem 7rem; */
+        grid-template-columns: 7.5rem 7.5rem;
     } 
 
     #url_shortener_form input,
@@ -1469,6 +1471,10 @@ footer::after {
         font-size: 0.6rem;
         padding: 0.6rem;
     } 
+
+    #url_shortener_form select {
+        width: 100%;
+    }
 
     #url_shortener_form button {
         font-size: 0.8rem;
