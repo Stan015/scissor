@@ -132,6 +132,7 @@ nav ul li a {
     &:hover {
         text-decoration: none;
         background-color: #005AE2;
+        transition: all 300ms ease-in;
     }
 }
 
@@ -225,6 +226,7 @@ nav ul li a {
 .hero .first_child .buttons_div {
     display: flex;
     width: 100%;
+    height: 3rem;
     gap: 2rem;
     justify-content: center;
     align-items: center;
@@ -243,12 +245,25 @@ nav ul li a {
     color: var(--clr-action);
     background-color: var(--bg-action);
     animation: fromLeftToRight 2000ms ease;
+
+    &:hover {
+        transform: translate(0.3rem, -0.3rem);
+        transition: transform 300ms ease-in;
+        background-color: #005AE2;
+    }
 }
 
 .buttons_div .learn_more {
     color: #0065FE;
     background-color: #FFFFFF;
     animation: fromRightToLeft 2000ms ease;
+
+    &:hover {
+        transform: translate(0.3rem, -0.3rem);
+        transition: all 300ms ease-in;
+        border: 2px solid #005AE2;
+        color: #005AE2;
+    }
 }
 
 .hero .second_child {
@@ -624,11 +639,21 @@ main .third_section {
     color: #005AE2;
     border: 2px solid #005AE2;
     background-color: #FFFFFF;
+
+    &:hover {
+        transform: translate(0.3rem, -0.3rem);
+        transition: transform 300ms ease-in;
+    }
 }
 
 .buttons_div button + button{
     color: #FFFFFF;
     background-color: #005AE2;
+
+    &:hover {
+        transform: translate(0.3rem, -0.3rem);
+        transition: transform 300ms ease-in;
+    }
 }
 /*  */
 
@@ -752,6 +777,11 @@ main .third_section {
     align-items: center;
     justify-content: center;
     gap: 1rem;
+
+    &:hover {
+        background-color: #005AE2;
+        transition: background-color 300ms ease-in;
+    }
 }
 
 .terms_of_service {
@@ -967,6 +997,12 @@ main .third_section {
     border-radius: 1.5rem;
     background-color: var(--bg-action);
     z-index: 1;
+
+    &:hover {
+        transform: translate(0.3rem, -0.3rem);
+        transition: all 300ms ease-in;
+        background-color: #005AE2;
+    }
 }
 /*  */
 
