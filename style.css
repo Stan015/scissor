@@ -1981,10 +1981,18 @@ footer::after {
     background: unset;
 }
 
-/* .other_pages_footer {
-    height: 20rem;
-} */
+.other_pages_footer {
+    gap: 1rem;
+}
 
+.other_pages_footer .ftr_list_div {
+    gap: 1rem;
+}
+
+.other_pages_footer a,
+.other_pages_footer p {
+    font-size: 0.8rem;
+}
 /*  */
 
 /* login form */
@@ -2175,3 +2183,202 @@ footer::after {
     }
 }
 /*  */
+
+/* sign up form */
+.sign_up_section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    /* height: 50svh; */
+    padding: 2rem 10%;
+}
+
+#sign_up_form {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(9, auto);
+    width: 30rem;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+#sign_up_form .sign_up_option {
+    grid-area: 1 / 1 / 1 / 3;
+    display: grid;
+    grid-template-columns: subgrid;
+    grid-template-rows: repeat(2, auto);
+    width: inherit;
+    border-bottom: 2px solid #A0B1C0;
+    position: relative;
+    gap: 1.5rem;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 2rem;
+}
+
+.sign_up_option p:first-child {
+    grid-area: 1 / 1 / 1 / 3;
+    text-align: center;
+    font-size: 1rem;
+    color: #5C6F7F;
+}
+
+.sign_up_option .google {
+    display: flex;
+    grid-area: 2 / 1 / 2 / 1;
+    justify-self: flex-end;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color: #005AE2;
+    width: 7rem;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+
+    img {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+.sign_up_option .apple {
+    display: flex;
+    grid-area: 2 / 2 / 2 / 2;
+    justify-self: flex-start;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: #FFFFFF;
+    background-color: #005AE2;
+    width: 7rem;
+    padding: 0.5rem 1rem;
+    gap: 0.5rem;
+    border-radius: 0.5rem;
+
+    img {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+
+.sign_up_option p:last-child {
+    position: absolute;
+    color: #5C6F7F;
+    font-size: 1rem;
+    bottom: -0.8rem;
+    height: 1.5rem;
+    width: 2rem;
+    text-align: center;
+    justify-self: center;
+    background-color: #FFFFFF;
+}
+
+#sign_up_form p input {
+    width: 100%;
+    height: 2.8rem;
+    border-radius: 1rem;
+    padding: 0 1rem;
+    border: 2px solid #005AE2;
+
+    &:placeholder {
+        color: #A0B1C0;
+    }
+}
+
+#sign_up_form .user_name {
+    grid-area: 2 / 1 / 2 / 3;
+}
+
+#sign_up_form .email {
+    grid-area: 3 / 1 / 3 / 3;
+}
+
+#sign_up_form .password {
+    grid-area: 4 / 1 / 4 / 3;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#sign_up_form .confirm_password {
+    grid-area: 5 / 1 / 5 / 3;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password img,
+.confirm_password img {
+    position: absolute;
+    right: 1rem;
+    pointer-events: none;
+    width: 1.5rem;
+    height: 1.5rem;
+}
+
+.password .eye_open,
+.confirm_password .eye_open {
+    display: block;
+}
+
+.password .eye_closed,
+.confirm_password .eye_closed {
+    display: none;
+}
+
+#sign_up_form .password_format {
+    grid-area: 6 / 1 / 6 / 3;
+    color: #A0B1C0;
+    font-size: 0.8rem;
+    position: relative;
+    top: -1rem;
+}
+
+#sign_up_form button {
+    grid-area: 7 / 1 / 7 / 3;
+    justify-self: center;
+    color: #FFFFFF;
+    font-size: 1rem;
+    width: 100%;
+    height: 2.8rem;
+    cursor: pointer;
+    background-color: #005AE2;
+    border-radius: 1rem;
+    border: none;
+}
+
+#sign_up_form .have_an_account {
+    grid-area: 8 / 1 / 8 / 3;
+    font-size: 0.8rem;
+    color: #5C6F7F;
+    text-align: center;
+    width: 100%;
+}
+
+#sign_up_form .have_an_account a {
+    color: #4991FF;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+#sign_up_form .terms {
+    grid-area: 9 / 1 / 9 / 3;
+    font-size: 0.8rem;
+    color: #A0B1C0;
+    text-align: center;
+}
+
+#sign_up_form .terms a {
+    color: #5C6F7F;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
