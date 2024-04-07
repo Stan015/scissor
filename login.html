@@ -1,194 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scissor url</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header class="other_pages_header">
-        <div class="desktop_nav_div">
-            <a href="index.html"><img class="logo" src="images/logo.svg" alt="scissor logo"></a>
-            
-            <nav class="primary_nav">
-                <ul>
-                    <li><a href="#" class="my_url_a">My URLs</a></li>
-                    <li><a href="#" class="features">Features</a></li>
-                    <li><a href="#">Pricing</a></li>
-                    <li><a href="#">Analytics</a></li>
-                    <li><a href="#">FAQs</a></li>
-                </ul>
-            </nav>
-            <nav class="secondary_nav">
-                <ul>
-                    <li><a href="#" class="login">Log in</a></li>
-                    <li><a href="sign_up.html" class="try_for_free">Try for free</a></li>
-                </ul>
-            </nav>
+      <div class="desktop_nav_div">
+        <a href="index.html"
+          ><img class="logo" src="images/logo.svg" alt="scissor logo"
+        /></a>
+
+        <nav class="primary_nav">
+          <ul>
+            <li><a href="#" class="my_url_a">My URLs</a></li>
+            <li><a href="index.html#features" class="features">Features</a></li>
+            <li><a href="index.html#pricing">Pricing</a></li>
+            <li><a href="#">Analytics</a></li>
+            <li><a href="index.html#faq">FAQs</a></li>
+          </ul>
+        </nav>
+        <nav class="secondary_nav">
+          <ul>
+            <li><a href="#" class="login">Log in</a></li>
+            <li>
+              <a href="sign_up.html" class="try_for_free">Try for free</a>
+            </li>
+          </ul>
+          <button type="button" class="logout">Logout</button>
+        </nav>
+      </div>
+
+      <div class="mobile_nav_div">
+        <a href="index.html"
+          ><img class="logo" src="images/logo.svg" alt="scissor logo"
+        /></a>
+
+        <div class="mobile_nav">
+          <nav class="primary_nav">
+            <ul>
+              <li><a href="#" class="my_url_a">My URLs</a></li>
+              <li><a href="index.html#features" class="features">Features</a></li>
+              <li><a href="index.html#pricing">Pricing</a></li>
+              <li><a href="#">Analytics</a></li>
+              <li><a href="index.html#faq">FAQs</a></li>
+            </ul>
+          </nav>
+          <nav class="secondary_nav">
+            <ul>
+              <li><a href="#" class="login">Log in</a></li>
+              <li>
+                <a href="sign_up.html" class="try_for_free">Try for free</a>
+              </li>
+            </ul>
+          </nav>
         </div>
 
-        <div class="mobile_nav_div">
-            <a href="index.html"><img class="logo" src="images/logo.svg" alt="scissor logo"></a>
-            
-            <div class="mobile_nav">
-                <nav class="primary_nav">
-                    <ul>
-                        <li><a href="#" class="my_url_a">My URLs</a></li>
-                        <li><a href="#" class="features">Features</a></li>
-                        <li><a href="#">Pricing</a></li>
-                        <li><a href="#">Analytics</a></li>
-                        <li><a href="#">FAQs</a></li>
-                    </ul>
-                </nav>
-                <nav class="secondary_nav">
-                    <ul>
-                        <li><a href="#" class="login">Log in</a></li>
-                        <li><a href="sign_up.html" class="try_for_free">Try for free</a></li>
-                    </ul>
-                </nav>
-            </div>
-
-            <div class="burger">
-                <div class="burger_dash"></div>
-                <div class="burger_dash"></div>
-                <div class="burger_dash"></div>
-            </div>
+        <div class="burger">
+          <div class="burger_dash"></div>
+          <div class="burger_dash"></div>
+          <div class="burger_dash"></div>
         </div>
+      </div>
     </header>
-    
+
     <section class="login_section">
-        <form action="#" id="login_form">
-            <div class="login_option">
-                <p>Log in with:</p>
-                <a href="#" class="google">
-                    <img src="icons/google_logo.svg" alt="google logo"> Google
-                </a>
-                <a href="#" class="apple"><img src="icons/apple-logo.svg" alt="Apple logo"> Apple</a>
-                <p>Or</p>
-            </div>
+      <form action="#" id="login_form">
+        <div class="login_option">
+          <p>Log in with:</p>
+          <a href="#" class="google">
+            <img src="icons/google_logo.svg" alt="google logo" /> Google
+          </a>
+          <a href="#" class="apple"
+            ><img src="icons/apple-logo.svg" alt="Apple logo" /> Apple</a
+          >
+          <p>Or</p>
+        </div>
 
-            <p class="user_name">
-                <input type="text" name="user_name" id="user_name" placeholder="Email address or username">
-            </p>
-            <p class="password">
-                <input type="password" name="password" id="password" placeholder="Password">
-                <img src="icons/eye_open.svg" alt="eye open icon" class="eye_open">
-                <img src="icons/eye_closed.svg" alt="eye closed icon" class="eye_closed">
-            </p>
+        <p class="email">
+          <input
+            type="email"
+            name="login-email"
+            id="login-email"
+            placeholder="Email address or username"
+            required
+          />
+        </p>
+        <p class="password">
+          <input
+            type="password"
+            name="login-password"
+            id="login-password"
+            placeholder="Password"
+            required
+          />
+          <img src="icons/eye_open.svg" alt="eye open icon" class="eye_open" />
+          <img
+            src="icons/eye_closed.svg"
+            alt="eye closed icon"
+            class="eye_closed"
+          />
+        </p>
 
-            <a href="#" class="forgot_password">Forgot your password?</a>
+        <a href="#" class="forgot_password">Forgot your password?</a>
 
-            <button type="submit">Login</button>
+        <button type="submit">Login</button>
 
-            <p class="no_account">Don’t have an account? <a href="sign_up.html">Sign up</a></p>
+        <p class="no_account">
+          Don’t have an account? <a href="sign_up.html">Sign up</a>
+        </p>
 
-            <p class="terms">By signing in with  an account, you agree to <br>Sciccor's <a href="#">Terms of Service</a>, <a href="#">Privacy Policy</a> and <a href="#">Acceptable Use Policy</a>.</p>
-        </form>
+        <p class="terms">
+          By signing in with an account, you agree to <br />Sciccor's
+          <a href="#">Terms of Service</a>, <a href="#">Privacy Policy</a> and
+          <a href="#">Acceptable Use Policy</a>.
+        </p>
+      </form>
     </section>
 
     <footer class="other_pages_footer">
-        <div class="ftr_first_child">
-            <div class="socials_div">
-                <a href="index.html"><img class="footer_logo" src="images/logo.svg" alt="scissor logo"></a>
-                <div class="social_media">
-                    <a href="#"><img src="icons/twitter_logo.svg" alt="twitter logo"></a>
-                    <a href="#"><img src="icons/instagram.svg" alt="instagram logo"></a>
-                    <a href="#"><img src="icons/linkedin.svg" alt="linkedin logo"></a>
-                    <a href="#"><img src="icons/facebook.svg" alt="facebook logo"></a>
-                </div>
-            </div>
-            <div class="ftr_list_div">
-                <div>
-                    <h5>Why Scissor ?</h5>
-            
-                    <ul>
-                        <li><a href="#">Scissor 101</a></li>
-                        <li><a href="#">Integrations & API</a></li>
-                        <li><a href="#">Pricing</a></li>
-                    </ul>
-                </div>
-            
-                <div>
-                    <h5>Solutions</h5>
-            
-                    <ul>
-                        <li><a href="#">Social Media</a></li>
-                        <li><a href="#">Digital Marketing</a></li>
-                        <li><a href="#">Customer Service</a></li>
-                        <li><a href="#">For Developers</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h5>Products</h5>
-            
-                    <ul>
-                        <li><a href="#">Link Management</a></li>
-                        <li><a href="#">QR Codes</a></li>
-                        <li><a href="#">Link-in-bio</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h5>Company</h5>
-            
-                    <ul>
-                        <li><a href="#">About Scissor</a></li>
-                        <li><a href="#">Careers</a></li>
-                        <li><a href="#">Partners</a></li>
-                        <li><a href="#">Press</a></li>
-                        <li><a href="#">Contact</a></li>
-                        <li><a href="#">Reviews</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h5>Resources</h5>
-            
-                    <ul>
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Resource Library</a></li>
-                        <li><a href="#">Developers</a></li>
-                        <li><a href="#">App Connectors</a></li>
-                        <li><a href="#">Support</a></li>
-                        <li><a href="#">Trust Center</a></li>
-                        <li><a href="#">Browser Extension</a></li>
-                        <li><a href="#">Mobile App</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h5>Features</h5>
-            
-                    <ul>
-                        <li><a href="#">Branded Links</a></li>
-                        <li><a href="#">Mobile Links</a></li>
-                        <li><a href="#">Campaign</a></li>
-                        <li><a href="#">Management & Analytics</a></li>
-                        <li><a href="#">QR Code generation</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h5>Legal</h5>
-            
-                    <ul>
-                        <li><a href="#">Privacy Policy</a></li>
-                        <li><a href="#">Cookie Policy</a></li>
-                        <li><a href="#">Terms of Service</a></li>
-                        <li><a href="#">Acceptable Use Policy</a></li>
-                        <li><a href="#">Code of Conduct</a></li>
-                    </ul>
-                </div>
-            </div>
+      <div class="ftr_first_child">
+        <div class="socials_div">
+          <a href="index.html"
+            ><img class="footer_logo" src="images/logo.svg" alt="scissor logo"
+          /></a>
+          <div class="social_media">
+            <a href="#"
+              ><img src="icons/twitter_logo.svg" alt="twitter logo"
+            /></a>
+            <a href="#"
+              ><img src="icons/instagram.svg" alt="instagram logo"
+            /></a>
+            <a href="#"><img src="icons/linkedin.svg" alt="linkedin logo" /></a>
+            <a href="#"><img src="icons/facebook.svg" alt="facebook logo" /></a>
+          </div>
         </div>
+        <div class="ftr_list_div">
+          <div>
+            <h5>Why Scissor ?</h5>
 
-        <div class="ftr_second_child">
-            <a href="#" class="terms">Term of Service</a>
-            <a href="#" class="security">Security</a>
-            <p class="copyright"><a href="https://twitter.com/StanleyAzi"target="_blank" rel="noopener">StanleyAzi</a> @ Scissor 2024</p>
+            <ul>
+              <li><a href="#">Scissor 101</a></li>
+              <li><a href="#">Integrations & API</a></li>
+              <li><a href="index.html#pricing">Pricing</a></li>
+            </ul>
+          </div>
+
+          <div>
+            <h5>Solutions</h5>
+
+            <ul>
+              <li><a href="#">Social Media</a></li>
+              <li><a href="#">Digital Marketing</a></li>
+              <li><a href="#">Customer Service</a></li>
+              <li><a href="#">For Developers</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5>Products</h5>
+
+            <ul>
+              <li><a href="#">Link Management</a></li>
+              <li><a href="#">QR Codes</a></li>
+              <li><a href="#">Link-in-bio</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5>Company</h5>
+
+            <ul>
+              <li><a href="#">About Scissor</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Partners</a></li>
+              <li><a href="#">Press</a></li>
+              <li><a href="#">Contact</a></li>
+              <li><a href="#">Reviews</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5>Resources</h5>
+
+            <ul>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Resource Library</a></li>
+              <li><a href="#">Developers</a></li>
+              <li><a href="#">App Connectors</a></li>
+              <li><a href="#">Support</a></li>
+              <li><a href="#">Trust Center</a></li>
+              <li><a href="#">Browser Extension</a></li>
+              <li><a href="#">Mobile App</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5>Features</h5>
+
+            <ul>
+              <li><a href="#">Branded Links</a></li>
+              <li><a href="#">Mobile Links</a></li>
+              <li><a href="#">Campaign</a></li>
+              <li><a href="#">Management & Analytics</a></li>
+              <li><a href="#">QR Code generation</a></li>
+            </ul>
+          </div>
+          <div>
+            <h5>Legal</h5>
+
+            <ul>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Cookie Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Acceptable Use Policy</a></li>
+              <li><a href="#">Code of Conduct</a></li>
+            </ul>
+          </div>
         </div>
+      </div>
+
+      <div class="ftr_second_child">
+        <a href="#" class="terms">Term of Service</a>
+        <a href="#" class="security">Security</a>
+        <p class="copyright">
+          <a
+            href="https://twitter.com/StanleyAzi"
+            target="_blank"
+            rel="noopener"
+            >StanleyAzi</a
+          >
+          @ Scissor 2024
+        </p>
+      </div>
     </footer>
 
-    <script src="script.js"></script>
-</body>
+    <script type="module" src="script.js"></script>
+    <script type="module" src="/auth.js"></script>
+  </body>
 </html>

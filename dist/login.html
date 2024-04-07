@@ -10,7 +10,8 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="style.css" />
+    <script type="module" crossorigin src="/assets/auth-CowxKJP_.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/auth-DrWQmFVO.css">
   </head>
   <body>
     <header class="other_pages_header">
@@ -30,9 +31,12 @@
         </nav>
         <nav class="secondary_nav">
           <ul>
-            <li><a href="login.html" class="login">Log in</a></li>
-            <li><a href="#" class="try_for_free">Try for free</a></li>
+            <li><a href="#" class="login">Log in</a></li>
+            <li>
+              <a href="sign_up.html" class="try_for_free">Try for free</a>
+            </li>
           </ul>
+          <button type="button" class="logout">Logout</button>
         </nav>
       </div>
 
@@ -53,8 +57,10 @@
           </nav>
           <nav class="secondary_nav">
             <ul>
-              <li><a href="login.html" class="login">Log in</a></li>
-              <li><a href="#" class="try_for_free">Try for free</a></li>
+              <li><a href="#" class="login">Log in</a></li>
+              <li>
+                <a href="sign_up.html" class="try_for_free">Try for free</a>
+              </li>
             </ul>
           </nav>
         </div>
@@ -67,10 +73,10 @@
       </div>
     </header>
 
-    <section class="sign_up_section">
-      <form action="#" id="sign_up_form">
-        <div class="sign_up_option">
-          <p>Sign up in with:</p>
+    <section class="login_section">
+      <form action="#" id="login_form">
+        <div class="login_option">
+          <p>Log in with:</p>
           <a href="#" class="google">
             <img src="icons/google_logo.svg" alt="google logo" /> Google
           </a>
@@ -80,23 +86,20 @@
           <p>Or</p>
         </div>
 
-        <p class="user_name">
+        <p class="email">
           <input
-            type="text"
-            name="user_name"
-            id="user_name"
-            placeholder="Username"
+            type="email"
+            name="login-email"
+            id="login-email"
+            placeholder="Email address or username"
             required
           />
-        </p>
-        <p class="email">
-          <input required type="email" name="signup-email" id="signup-email" placeholder="Email" />
         </p>
         <p class="password">
           <input
             type="password"
-            name="signup-password"
-            id="signup-password"
+            name="login-password"
+            id="login-password"
             placeholder="Password"
             required
           />
@@ -107,30 +110,13 @@
             class="eye_closed"
           />
         </p>
-        <p class="confirm_password">
-          <input
-            type="password"
-            name="confirm_password"
-            id="confirm_password"
-            placeholder="Retype assword"
-            required
-          />
-          <img src="icons/eye_open.svg" alt="eye open icon" class="eye_open" />
-          <img
-            src="icons/eye_closed.svg"
-            alt="eye closed icon"
-            class="eye_closed"
-          />
-        </p>
 
-        <p class="password_format">
-          6 or more characters, one number, one uppercase & one lower case.
-        </p>
+        <a href="#" class="forgot_password">Forgot your password?</a>
 
-        <button type="submit">Sign up with Email</button>
+        <button type="submit">Login</button>
 
-        <p class="have_an_account">
-          Already have an account? <a href="login.html">Login</a>
+        <p class="no_account">
+          Don’t have an account? <a href="sign_up.html">Sign up</a>
         </p>
 
         <p class="terms">
@@ -254,7 +240,5 @@
       </div>
     </footer>
 
-    <script type="module" src="script.js"></script>
-    <script type="module" src="auth.js"></script>
   </body>
 </html>
