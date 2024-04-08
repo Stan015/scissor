@@ -10,8 +10,9 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/assets/auth-CowxKJP_.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/auth-DrWQmFVO.css">
+    <script type="module" crossorigin src="/assets/login-0ZlNVwlj.js"></script>
+    <link rel="modulepreload" crossorigin href="/assets/auth-BlFnYq-u.js">
+    <link rel="stylesheet" crossorigin href="/assets/auth-xZ6WhkWP.css">
   </head>
   <body>
     <header class="other_pages_header">
@@ -77,12 +78,14 @@
       <form action="#" id="login_form">
         <div class="login_option">
           <p>Log in with:</p>
-          <a href="#" class="google">
-            <img src="icons/google_logo.svg" alt="google logo" /> Google
-          </a>
-          <a href="#" class="apple"
-            ><img src="icons/apple-logo.svg" alt="Apple logo" /> Apple</a
-          >
+          <button type="button" class="google">
+            <img src="icons/google_logo.svg" alt="google logo" /> 
+            Google
+          </button>
+          <button type="button" class="facebook">
+            <img src="icons/facebook-logo.svg" alt="facebook logo" /> 
+            Facebook 
+          </button>
           <p>Or</p>
         </div>
 
@@ -91,7 +94,7 @@
             type="email"
             name="login-email"
             id="login-email"
-            placeholder="Email address or username"
+            placeholder="Email address"
             required
           />
         </p>
@@ -113,7 +116,7 @@
 
         <a href="#" class="forgot_password">Forgot your password?</a>
 
-        <button type="submit">Login</button>
+        <button class="login-btn" type="submit">Login</button>
 
         <p class="no_account">
           Don’t have an account? <a href="sign_up.html">Sign up</a>

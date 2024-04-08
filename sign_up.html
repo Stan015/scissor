@@ -71,21 +71,23 @@
       <form action="#" id="sign_up_form">
         <div class="sign_up_option">
           <p>Sign up in with:</p>
-          <a href="#" class="google">
-            <img src="icons/google_logo.svg" alt="google logo" /> Google
-          </a>
-          <a href="#" class="apple"
-            ><img src="icons/apple-logo.svg" alt="Apple logo" /> Apple</a
-          >
+          <button type="button" class="google">
+            <img src="icons/google_logo.svg" alt="google logo" /> 
+            Google
+          </button>
+          <button type="button" class="facebook">
+            <img src="icons/facebook-logo.svg" alt="facebook logo" /> 
+            Facebook 
+          </button>
           <p>Or</p>
         </div>
 
-        <p class="user_name">
+        <p class="full-name">
           <input
             type="text"
-            name="user_name"
-            id="user_name"
-            placeholder="Username"
+            name="full-name"
+            id="full-name"
+            placeholder="Full name"
             required
           />
         </p>
@@ -127,7 +129,7 @@
           6 or more characters, one number, one uppercase & one lower case.
         </p>
 
-        <button type="submit">Sign up with Email</button>
+        <button class="sign-up-btn" type="submit">Sign up with Email</button>
 
         <p class="have_an_account">
           Already have an account? <a href="login.html">Login</a>
@@ -255,6 +257,6 @@
     </footer>
 
     <script type="module" src="script.js"></script>
-    <script type="module" src="auth.js"></script>
+    <script type="module" src="auth/auth-signup.js"></script>
   </body>
 </html>

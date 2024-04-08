@@ -1064,6 +1064,7 @@ footer::after {
   display: inherit;
   justify-content: space-around;
   width: 100%;
+  align-items: center;
 }
 
 .ftr_list_div {
@@ -2018,7 +2019,10 @@ footer::after {
   color: #5c6f7f;
 }
 
-.login_option .google {
+.login_option .google,
+.login_option .facebook,
+.sign_up_option .google,
+.sign_up_option .facebook {
   display: flex;
   grid-area: 2 / 1 / 2 / 1;
   justify-self: flex-end;
@@ -2031,6 +2035,7 @@ footer::after {
   padding: 0.5rem 1rem;
   gap: 0.5rem;
   border-radius: 0.5rem;
+  border: none;
 
   img {
     width: 1rem;
@@ -2038,24 +2043,10 @@ footer::after {
   }
 }
 
-.login_option .apple {
-  display: flex;
+.login_option .facebook,
+.sign_up_option .facebook {
   grid-area: 2 / 2 / 2 / 2;
   justify-self: flex-start;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  color: #ffffff;
-  background-color: #005ae2;
-  width: 7rem;
-  padding: 0.5rem 1rem;
-  gap: 0.5rem;
-  border-radius: 0.5rem;
-
-  img {
-    width: 1rem;
-    height: 1rem;
-  }
 }
 
 .login_option p:last-child {
@@ -2120,7 +2111,7 @@ footer::after {
   }
 }
 
-#login_form button {
+#login_form .login-btn {
   grid-area: 5 / 1 / 5 / 3;
   justify-self: center;
   color: #ffffff;
@@ -2207,46 +2198,6 @@ footer::after {
   color: #5c6f7f;
 }
 
-.sign_up_option .google {
-  display: flex;
-  grid-area: 2 / 1 / 2 / 1;
-  justify-self: flex-end;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  color: #ffffff;
-  background-color: #005ae2;
-  width: 7rem;
-  padding: 0.5rem 1rem;
-  gap: 0.5rem;
-  border-radius: 0.5rem;
-
-  img {
-    width: 1rem;
-    height: 1rem;
-  }
-}
-
-.sign_up_option .apple {
-  display: flex;
-  grid-area: 2 / 2 / 2 / 2;
-  justify-self: flex-start;
-  align-items: center;
-  justify-content: center;
-  font-size: 1rem;
-  color: #ffffff;
-  background-color: #005ae2;
-  width: 7rem;
-  padding: 0.5rem 1rem;
-  gap: 0.5rem;
-  border-radius: 0.5rem;
-
-  img {
-    width: 1rem;
-    height: 1rem;
-  }
-}
-
 .sign_up_option p:last-child {
   position: absolute;
   color: #5c6f7f;
@@ -2271,7 +2222,7 @@ footer::after {
   }
 }
 
-#sign_up_form .user_name {
+#sign_up_form .full-name {
   grid-area: 2 / 1 / 2 / 3;
 }
 
@@ -2320,7 +2271,7 @@ footer::after {
   top: -1rem;
 }
 
-#sign_up_form button {
+#sign_up_form .sign-up-btn {
   grid-area: 7 / 1 / 7 / 3;
   justify-self: center;
   color: #ffffff;
