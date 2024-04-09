@@ -47,7 +47,7 @@ li {
 
 header {
   display: block;
-  height: 100svh;
+  min-height: 100svh;
   width: 100%;
   background: linear-gradient(0.4turn, #d605050e, #ffffff, #ffffff),
     linear-gradient(2.6turn, #eac81f37, #ffffff, #ffffff),
@@ -68,8 +68,8 @@ header .desktop_nav_div {
 }
 
 .logo {
-  min-width: 10rem;
-  min-height: 2.5rem;
+  width: 10rem;
+  height: 2.5rem;
 }
 
 nav {
@@ -146,7 +146,7 @@ nav ul li a {
 .hero {
   display: flex;
   flex-direction: column;
-  height: calc(100svh - 6rem);
+  min-height: calc(100svh - 6rem);
   justify-content: space-between;
   align-items: center;
   width: 100%;
@@ -1959,7 +1959,7 @@ footer::after {
 
 /* other pages' header and footer styling */
 .other_pages_header {
-  height: auto;
+  min-height: max-content;
   background: unset;
 }
 
