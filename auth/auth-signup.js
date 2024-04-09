@@ -29,7 +29,7 @@ signUpForm.addEventListener("submit", (e) => {
       const user = userCredential.user;
       console.log(user);
 
-      window.location.href = "index.html";
+      window.location.href = "../dashboard/dashboard.html";
     })
     .catch((error) => {
       console.log(error);
@@ -77,7 +77,7 @@ facebookSignUpBtn.addEventListener('click', () => {
         const user = result.user;
   
         // console.log(user, secret, token)
-        window.location.href = "index.html";
+        window.location.href = "../dashboard/dashboard.html";
       })
       .catch((error) => {
         const errorCode = error.code;
