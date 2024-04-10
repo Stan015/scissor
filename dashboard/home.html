@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scissor Cut Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <header>
+      <div class="menu-container">
+        <div class="burger">
+          <div class="burger_dash"></div>
+          <div class="burger_dash"></div>
+          <div class="burger_dash"></div>
+        </div>
+        <a href="#"
+          ><img class="logo" src="../images/logo.svg" alt="scissor logo"
+        /></a>
+      </div>
+      <div class="search-bar-container">
+        <form class="search-form">
+          <button type="submit">
+            <img src="../icons/search-icon.svg" alt="search icon" />
+          </button>
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search links by name"
+          />
+        </form>
+
+        <div class="user-profile">
+          <img
+            class="profile-pic"
+            src="../icons/user-profile-pic.svg"
+            alt="user profile picture"
+          />
+          <div class="quick-action-btns">
+            <button type="button" class="logout">Log out</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <nav class="nav-links">
+        <div>
+          <a href="#" aria-current="true">
+            <img src="../icons/home-icon.svg" alt="home icon" />
+            Dashboard
+          </a>
+          <a href="./links.html">
+            <img src="../icons/link-icon.svg" alt="link icon" />
+            Links
+          </a>
+          <a href="./analytics.html">
+            <img src="../icons/analytics-icon.svg" alt="analytics icon" />
+            Analytics
+          </a>
+        </div>
+
+        <div>
+          <a href="#">
+            <img src="../icons/settings-icon.svg" alt="settings icon" />
+            Settings
+          </a>
+          <a href="#">
+            <img
+              src="../icons/customer-care-icon.svg"
+              alt="customer care icon"
+            />
+            Help center
+          </a>
+        </div>
+
+        <div>
+          <div class="user-details">
+            <h5 class="user-full-name">Stanley Azi</h5>
+            <p class="user-email">azistanley17@gmail.com</p>
+          </div>
+          <button type="button" class="logout">Log Out</button>
+        </div>
+      </nav>
+
+      <div class="container">
+        <section class="greetings-section">
+          <div>
+            <h2 class="welcome-m">Welcome Stanley Azi</h2>
+            <p>The time is <span>12:30pm</span>, good afternoon.</p>
+          </div>
+          <div class="date-div">
+            <img src="../icons/calender-icon.svg" alt="calender icon" />
+            <p>Today's date is <span>10/4/2024</span></p>
+          </div>
+        </section>
+        <section class="links-chart-section">
+          <div class="total-urls">
+            <h5>Total URLs</h5>
+            <p>300</p>
+            <img src="../icons/url-icon.svg" alt="url icon" />
+          </div>
+          <div class="all-time-clicks">
+            <h5>All time clicks</h5>
+            <p>3209</p>
+            <img src="../icons/click-icon.svg" alt="click icon" />
+          </div>
+          <div class="added-this-month">
+            <h5>Links added this month</h5>
+            <p>80</p>
+            <img src="../icons/link-icon.svg" alt="url icon" />
+          </div>
+          <div class="clicks-chart">
+            <h5>Clicks in the last 7 days</h5>
+            <div class="chart"></div>
+          </div>
+        </section>
+        <form action="/" id="url_shortener_form" class="shorten-url">
+          <input
+            type="text"
+            name="url_input"
+            id="url_input"
+            placeholder="Paste url here..."
+            required
+          />
+          <input
+            type="text"
+            name="url-title"
+            id="url-title"
+            placeholder="Name your URL"
+          />
+          <input
+            type="text"
+            name="alias"
+            id="alias"
+            placeholder="Type Alias here"
+          />
+          <p class="shortened-url">Shortened URL</p>
+          <button type="submit" class="trim_url_button">
+            Trim URL
+            <img src="../icons/magic_wand.svg" alt="magic wand icon" />
+          </button>
+          <p class="terms_of_service">
+            By clicking TrimURL, I agree to the
+            <a href="#">Terms of Service</a>, <a href="#">Privacy Policy</a> and
+            Use of Cookies.
+          </p>
+        </form>
+        <section class="links-sections">
+          <div class="heading">
+            <h5>Recently added links</h5>
+            <a href="./links.html">See all links</a>
+          </div>
+          <div class="link-lists">
+            <div class="link-div">
+                <h6 class="link-title">Test 1:</h6>
+                <p class="s-link">https://shortened-link1</p>
+                <p class="number-of-clicks">Clicks: <span>40</span></p>
+                <div class="link-actions">
+                    <button type="button">
+                        <img src="../icons/copy-link-icon.svg" alt="copy link icon">
+                    </button>
+                    <button type="button">
+                        <img src="../icons/navigate-link.svg" alt="navigate link icon">
+                    </button>
+                    <button type="button">
+                        <img src="../icons/scan-qr-code.svg" alt="qr code icon">
+                    </button>
+                    <button type="button">
+                        <img src="../icons/share-link.svg" alt="share link icon">
+                    </button>
+                </div>
+            </div>
+            <div class="link-div">
+                <h6 class="link-title">Test 2:</h6>
+                <p class="s-link">https://shortened-link2</p>
+                <p class="number-of-clicks">Clicks: <span>60</span></p>
+                <div class="link-actions">
+                    <button type="button">
+                        <img src="../icons/copy-link-icon.svg" alt="copy link icon">
+                    </button>
+                    <button type="button">
+                        <img src="../icons/navigate-link.svg" alt="navigate link icon">
+                    </button>
+                    <button type="button">
+                        <img src="../icons/scan-qr-code.svg" alt="qr code icon">
+                    </button>
+                    <button type="button">
+                        <img src="../icons/share-link.svg" alt="share link icon">
+                    </button>
+                </div>
+            </div>
+            <div class="link-div">
+                <h6 class="link-title">Test 3:</h6>
+                <p class="s-link">https://shortened-link3</p>
+                <p class="number-of-clicks">Clicks: <span>100</span></p>
+                <div class="link-actions">
+                    <button type="button">
+                        <img src="../icons/copy-link-icon.svg" alt="copy link icon">
+                    </button>
+                    <button type="button">
+                        <img src="../icons/navigate-link.svg" alt="navigate link icon">
+                    </button>
+                    <button type="button">
+                        <img src="../icons/scan-qr-code.svg" alt="qr code icon">
+                    </button>
+                    <button type="button">
+                        <img src="../icons/share-link.svg" alt="share link icon">
+                    </button>
+                </div>
+            </div>
+            <div class="link-div">
+                <h6 class="link-title">Test 4:</h6>
+                <p class="s-link">https://shortened-link4</p>
+                <p class="number-of-clicks">Clicks: <span>300</span></p>
+                <div class="link-actions">
+                    <button type="button">
+                        <img src="../icons/copy-link-icon.svg" alt="copy link icon">
+                    </button>
+                    <button type="button">
+                        <img src="../icons/navigate-link.svg" alt="navigate link icon">
+                    </button>
+                    <button type="button">
+                        <img src="../icons/scan-qr-code.svg" alt="qr code icon">
+                    </button>
+                    <button type="button">
+                        <img src="../icons/share-link.svg" alt="share link icon">
+                    </button>
+                </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <script type="module" src="dashboard.js"></script>
+    <script type="module" src="../auth/auth-logout.js"></script>
+  </body>
+</html>

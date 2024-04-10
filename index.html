@@ -263,26 +263,20 @@
           placeholder="Paste url here..."
           required
         />
-        <p class="select_domain">
-          <select title="domain" name="domain" id="domain" required>
-            <option value="" disabled selected>Choose domain</option>
-            <option value="domain_one">Domain one</option>
-            <option value="domain_two">Domain two</option>
-            <option value="domain_three">Domain three</option>
-          </select>
-
-          <img
-            class="select_arrow_down"
-            src="icons/arrow_down_b.svg"
-            alt="dropdown arrow icon"
-          />
-        </p>
+        <input
+          type="text"
+          name="url-title"
+          id="url-title"
+          placeholder="Name your URL"
+        />
         <input
           type="text"
           name="alias"
           id="alias"
           placeholder="Type Alias here"
         />
+
+        <p class="shortened-url">Shortened URL</p>
 
         <button type="submit" class="trim_url_button">
           Trim URL <img src="icons/magic_wand.svg" alt="magic wand icon" />

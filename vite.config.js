@@ -7,7 +7,7 @@ export default defineConfig({
         main: "./index.html",
         login: "./login.html",
         signup: "./sign_up.html",
-        dashboard: "./dashboard/dashboard.html",
+        dashboard: "./dashboard/home.html",
       },
     },
   },

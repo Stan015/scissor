@@ -29,7 +29,7 @@ signUpForm.addEventListener("submit", (e) => {
       const user = userCredential.user;
       console.log(user);
 
-      window.location.href = "../dashboard/dashboard.html";
+      window.location.href = "../dashboard/home.html";
     })
     .catch((error) => {
       console.log(error);
@@ -51,7 +51,7 @@ googleSignUpBtn.addEventListener("click", () => {
     const user = result.user;
     console.log(user);
 
-    window.location.href = "../dashboard/dashboard.html";
+    window.location.href = "../dashboard/home.html";
 
   });
   //   .catch((error) => {
@@ -77,7 +77,7 @@ facebookSignUpBtn.addEventListener('click', () => {
         const user = result.user;
   
         // console.log(user, secret, token)
-        window.location.href = "../dashboard/dashboard.html";
+        window.location.href = "../dashboard/home.html";
       })
       .catch((error) => {
         const errorCode = error.code;

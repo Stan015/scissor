@@ -26,7 +26,7 @@ loginForm.addEventListener("submit", (e) => {
     .then((userCredential) => {
       const user = userCredential.user;
 
-      window.location.href = "../dashboard/dashboard.html";
+      window.location.href = "../dashboard/home.html";
 
       console.log(user);
     })
@@ -49,7 +49,7 @@ googleLoginBtn.addEventListener("click", () => {
       const user = result.user;
       console.log(user);
 
-      window.location.href = "../dashboard/dashboard.html";
+      window.location.href = "../dashboard/home.html";
     })
     .catch((error) => {
       const errorCode = error.code;
@@ -75,7 +75,7 @@ facebookLoginBtn.addEventListener("click", () => {
       const secret = credential.secret;
       const user = result.user;
 
-      window.location.href = "../dashboard/dashboard.html";
+      window.location.href = "../dashboard/home.html";
     })
     .catch((error) => {
       const errorCode = error.code;
