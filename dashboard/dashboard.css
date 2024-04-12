@@ -166,8 +166,13 @@ header .search-bar-container {
   }
 }
 
+.show-quick-action-btns {
+  display: block !important;
+}
+
 main {
   display: flex;
+  background-color: #f9fbfd;
 }
 
 main .nav-links {
@@ -196,6 +201,7 @@ main .nav-links {
       height: 2.5rem;
       padding: 0.7rem;
       font-size: 1rem;
+      border-radius: 1rem 0 0 1rem;
 
       &:hover {
         background-color: rgba(50, 132, 255, 0.068);
@@ -206,7 +212,6 @@ main .nav-links {
       background-color: rgba(50, 132, 255, 0.13);
       color: #0065fe;
       position: relative;
-      border-radius: 1rem 0 0 1rem;
 
       &::after {
         display: block;
@@ -246,6 +251,11 @@ main .nav-links {
       }
     }
   }
+}
+
+.toggle-nav-bar {
+  display: none !important;
+  transition: all 300ms ease-in;
 }
 
 main .container {
@@ -476,7 +486,7 @@ main .container {
         & button {
           background-color: unset;
           border: none;
-          
+
         }
       }
     }

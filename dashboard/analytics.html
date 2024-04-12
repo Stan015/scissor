@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Scissor Cut Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <header>
+      <div class="menu-container">
+        <div class="burger">
+          <div class="burger_dash"></div>
+          <div class="burger_dash"></div>
+          <div class="burger_dash"></div>
+        </div>
+        <a href="./home.html"
+          ><img class="logo" src="../images/logo.svg" alt="scissor logo"
+        /></a>
+      </div>
+      <div class="search-bar-container">
+        <form class="search-form">
+          <button type="submit">
+            <img src="../icons/search-icon.svg" alt="search icon" />
+          </button>
+          <input
+            type="search"
+            name="search"
+            id="search"
+            placeholder="Search links by name"
+          />
+        </form>
+
+        <div class="user-profile">
+          <img
+            class="profile-pic"
+            src="../icons/user-profile-pic.svg"
+            alt="user profile picture"
+          />
+          <div class="quick-action-btns">
+            <button type="button" class="logout">Log out</button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <nav class="nav-links">
+        <div>
+          <a href="./home.html">
+            <img src="../icons/home-icon.svg" alt="home icon" />
+            Dashboard
+          </a>
+          <a href="./links.html">
+            <img src="../icons/link-icon.svg" alt="link icon" />
+            Links
+          </a>
+          <a href="#" aria-current="true">
+            <img src="../icons/analytics-icon.svg" alt="analytics icon" />
+            Analytics
+          </a>
+        </div>
+
+        <div>
+          <a href="setting.html">
+            <img src="../icons/settings-icon.svg" alt="settings icon" />
+            Settings
+          </a>
+          <a href="help-center.html">
+            <img
+              src="../icons/customer-care-icon.svg"
+              alt="customer care icon"
+            />
+            Help center
+          </a>
+        </div>
+
+        <div>
+          <div class="user-details">
+            <h5 class="user-full-name">Stanley Azi</h5>
+            <p class="user-email">azistanley17@gmail.com</p>
+          </div>
+          <button type="button" class="logout">Log Out</button>
+        </div>
+      </nav>
+
+      <div class="container">
+        <h1>Under Construction</h1>
+      </div>
+    </main>
+
+    <script type="module" src="dashboard.js"></script>
+    <script type="module" src="../auth/auth-logout.js"></script>
+  </body>
+</html>

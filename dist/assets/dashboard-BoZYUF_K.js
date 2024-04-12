@@ -1,1 +1,0 @@
-import{i as e,g as o,b as i,f as n}from"./auth-CXNqgBkK.js";const a=e(n),s=o(a),c=document.querySelector(".logout");c.addEventListener("click",t=>{t.preventDefault(),i(s),window.location.href="../index.html"});
