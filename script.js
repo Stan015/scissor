@@ -1,3 +1,5 @@
+import axios from "axios";
+
 //burger menu toggle
 function burgerToggle() {
   const burger = document.querySelector(".burger");
@@ -170,4 +172,49 @@ function animationOnScroll() {
 }
 
 animationOnScroll();
+//
+
+// shorten url function
+const urlShortenerForm = document.getElementById("url_shortener_form");
+const newURLInput = urlShortenerForm.querySelector("#url_input");
+const chosenDomain = urlShortenerForm.querySelector("#domain");
+const linkAliasInput = urlShortenerForm.querySelector("#alias");
+const trimURLBtn = urlShortenerForm.querySelector(".trim_url_button");
+const shortenedURL = urlShortenerForm.querySelector(".shortened-url");
+
+trimURLBtn.addEventListener("click", (e) => {
+  e.preventDefault();
+
+  const linkToShorten = newURLInput.value;
+  const domain = chosenDomain.value;
+  const linkAlias = linkAliasInput.value;
+  shortenURL(linkToShorten, domain, linkAlias);
+});
+
+const TINYURL_API_TOKEN = import.meta.env.VITE_TINYURL_TOKEN;
+
+async function shortenURL(link, domain = "tinyurl.com", alias = "") {
+  try {
+    const response = await axios.post(
+      "https://api.tinyurl.com/create",
+      {
+        domain: domain,
+        url: link,
+        alias: alias,
+      },
+      {
+        headers: {
+          Authorization: `Bearer ${TINYURL_API_TOKEN}`,
+        },
+      }
+    );
+
+    // console.log(response.data.data.alias);
+
+    shortenedURL.innerText = response.data.data.tiny_url;
+    return response.data.data;
+  } catch (error) {
+    console.log(error.message);
+  }
+}
 //

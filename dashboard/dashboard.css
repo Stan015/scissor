@@ -372,6 +372,7 @@ main .container {
   z-index: 2;
 
   & input,
+  & select,
   & .shortened-url,
   & button {
     display: flex;

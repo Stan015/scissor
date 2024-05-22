@@ -715,6 +715,7 @@ main .third_section {
 
 #url_shortener_form input,
 #url_shortener_form .shortened-url,
+#url_shortener_form #domain,
 #url_shortener_form button {
   display: flex;
   height: 3rem;
@@ -1457,6 +1458,7 @@ footer::after {
 
   #url_shortener_form input,
   #url_shortener_form p,
+  #url_shortener_form #domain,
   #url_shortener_form button {
     font-size: 0.6rem;
     padding: 0.6rem;

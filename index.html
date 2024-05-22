@@ -21,7 +21,7 @@
 
         <nav class="primary_nav">
           <ul>
-            <li><a href="#" class="my_url_a">My URLs</a></li>
+            <li><a href="login.html" class="my_url_a">My URLs</a></li>
             <li><a href="#features" class="features">Features</a></li>
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#">Analytics</a></li>
@@ -263,12 +263,10 @@
           placeholder="Paste url here..."
           required
         />
-        <input
-          type="text"
-          name="url-title"
-          id="url-title"
-          placeholder="Name your URL"
-        />
+        <select name="domain" title="domain" id="domain">
+          <option value="">Select Domain</option>
+          <option value="tinyurl.com">tinyurl.com</option>
+        </select>
         <input
           type="text"
           name="alias"
