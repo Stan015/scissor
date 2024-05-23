@@ -1,16 +1,4 @@
-import { initializeApp } from "firebase/app";
-import {
-  getAuth,
-  createUserWithEmailAndPassword,
-  GoogleAuthProvider,
-  signInWithPopup,
-  FacebookAuthProvider,
-} from "firebase/auth";
-import { firebaseConfig } from "./auth";
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+import supabase from "./auth";
 
 // sign up new user
 const signUpForm = document.querySelector("#sign_up_form");
@@ -24,68 +12,54 @@ signUpForm.addEventListener("submit", (e) => {
 
   console.log(fullName);
 
-  createUserWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      const user = userCredential.user;
-      console.log(user);
-
-      window.location.href = "../dashboard/home.html";
-    })
-    .catch((error) => {
-      console.log(error);
+  (async function signUpNewUser() {
+    const { data, error } = await supabase.auth.signUp({
+      email: email,
+      password: password,
     });
+
+    // if (error) {
+    //   console.error('Error signing up:', error);
+    // } else {
+    //   console.log('Signed up successfully:', data);
+    //   window.location.href = "../dashboard/home.html";
+    // }
+  })();
 });
 
 // sign up new user with google popup
 const googleSignUpBtn = signUpForm.querySelector(".google");
 
-
 googleSignUpBtn.addEventListener("click", () => {
-  const provider = new GoogleAuthProvider();
+  (async function signInWithPopup() {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
+    });
 
-  signInWithPopup(auth, provider).then((result) => {
-    // This gives you a Google Access Token. You can use it to access the Google API.
-    const credential = GoogleAuthProvider.credentialFromResult(result);
-    const token = credential.accessToken;
-    // The signed-in user info.
-    const user = result.user;
-    console.log(user);
-
-    window.location.href = "../dashboard/home.html";
-
-  });
-  //   .catch((error) => {
-  //     const errorCode = error.code;
-  //     const errorMessage = error.message;
-  //     const email = error.customData.email;
-  //     const credential = GoogleAuthProvider.credentialFromError(error);
-  //     // ...
-  //   });
+    // if (error) {
+    //   console.error('Error signing up:', error);
+    // } else if (data) {
+    //   console.log('Signed up successfully:', data);
+    //   window.location.href = "../dashboard/home.html";
+    // }
+  })();
 });
 
-// sign up with twitter 
+// sign up with facebook
 const facebookSignUpBtn = signUpForm.querySelector(".facebook");
 
-facebookSignUpBtn.addEventListener('click', () => {
-    const provider = new FacebookAuthProvider();
+facebookSignUpBtn.addEventListener("click", () => {
+  (async function signInWithPopup() {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "facebook",
+    });
 
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        const credential = FacebookAuthProvider.credentialFromResult(result);
-        const token = credential.accessToken;
-        const secret = credential.secret;
-        const user = result.user;
-  
-        // console.log(user, secret, token)
-        window.location.href = "../dashboard/home.html";
-      })
-      .catch((error) => {
-        const errorCode = error.code;
-        const errorMessage = error.message;
-  
-        console.log(errorCode, errorMessage);
-        //   const email = error.customData.email;
-        //   const credential = TwitterAuthProvider.credentialFromError(error);
-      });
-})
+    // if (error) {
+    //   console.error('Error signing up:', error);
+    // } else if (data) {
+    //   console.log('Signed up successfully:', data);
+    //   window.location.href = "../dashboard/home.html";
+    // }
+  })();
+});
 //

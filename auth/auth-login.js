@@ -1,17 +1,4 @@
-import { initializeApp } from "firebase/app";
-import {
-  getAuth,
-  signInWithEmailAndPassword,
-  GoogleAuthProvider,
-  signInWithPopup,
-  signInWithRedirect,
-  FacebookAuthProvider,
-} from "firebase/auth";
-import { firebaseConfig } from "./auth";
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+import supabase from "./auth";
 
 // login existing user
 const loginForm = document.querySelector("#login_form");
@@ -22,17 +9,19 @@ loginForm.addEventListener("submit", (e) => {
   const email = loginForm.querySelector("#login-email").value;
   const password = loginForm.querySelector("#login-password").value;
 
-  signInWithEmailAndPassword(auth, email, password)
-    .then((userCredential) => {
-      const user = userCredential.user;
-
-      window.location.href = "../dashboard/home.html";
-
-      console.log(user);
-    })
-    .catch((error) => {
-      console.log(error);
+  (async function signInWithEmail() {
+    const { data, error } = await supabase.auth.signInWithPassword({
+      email: email,
+      password: password,
     });
+
+    // if (error) {
+    //   console.error('Error signing in:', error);
+    // } else if (data) {
+    //   console.log('Signed in successfully:', data);
+    //   window.location.href = "../dashboard/home.html";
+    // }
+  })();
 });
 //
 
@@ -40,25 +29,18 @@ loginForm.addEventListener("submit", (e) => {
 const googleLoginBtn = loginForm.querySelector(".google");
 
 googleLoginBtn.addEventListener("click", () => {
-  const provider = new GoogleAuthProvider();
-
-  signInWithPopup(auth, provider)
-    .then((result) => {
-      const credential = GoogleAuthProvider.credentialFromResult(result);
-      const token = credential.accessToken;
-      const user = result.user;
-      console.log(user);
-
-      window.location.href = "../dashboard/home.html";
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-      const email = error.customData.email;
-
-      console.log(errorCode, errorMessage, email);
-      //   const credential = GoogleAuthProvider.credentialFromError(error);
+  (async function signInWithPopup() {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "google",
     });
+
+    // if (error) {
+    //   console.error('Error signing in:', error);
+    // } else if (data) {
+    //   console.log('Signed in successfully:', data);
+    //   window.location.href = "../dashboard/home.html";
+    // }
+  })();
 });
 //
 
@@ -66,47 +48,17 @@ googleLoginBtn.addEventListener("click", () => {
 const facebookLoginBtn = loginForm.querySelector(".facebook");
 
 facebookLoginBtn.addEventListener("click", () => {
-  const provider = new FacebookAuthProvider();
-
-  signInWithPopup(auth, provider)
-    .then((result) => {
-      const credential = FacebookAuthProvider.credentialFromResult(result);
-      const token = credential.accessToken;
-      const secret = credential.secret;
-      const user = result.user;
-
-      window.location.href = "../dashboard/home.html";
-    })
-    .catch((error) => {
-      const errorCode = error.code;
-      const errorMessage = error.message;
-
-      console.log(errorCode, errorMessage);
-      //   const email = error.customData.email;
-      //   const credential = TwitterAuthProvider.credentialFromError(error);
+  (async function signInWithPopup() {
+    const { data, error } = await supabase.auth.signInWithOAuth({
+      provider: "facebook",
     });
+
+    // if (error) {
+    //   console.error("Error signing in:", error);
+    // } else {
+    //   console.log("Signed in successfully:", data);
+    //   window.location.href = "../dashboard/home.html";
+    // }
+  })();
 });
 //
-
-// // login with google redirect
-// googleLoginBtn.addEventListener('click', () => {
-//   const provider = new GoogleAuthProvider();
-
-//     signInWithRedirect(auth, provider);
-
-//     getRedirectResult(auth)
-//     .then((result) => {
-//       const credential = GoogleAuthProvider.credentialFromResult(result);
-//       const token = credential.accessToken;
-
-//       const user = result.user;
-
-//       window.location.href = "index.html";
-//     })
-//     // .catch((error) => {
-//     //   const errorCode = error.code;
-//     //   const errorMessage = error.message;
-//     //   const email = error.customData.email;
-//     //   const credential = GoogleAuthProvider.      credentialFromError(error);
-//     // });
-// })

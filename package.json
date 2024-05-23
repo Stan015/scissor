@@ -16,6 +16,7 @@
   },
   "license": "MIT",
   "dependencies": {
+    "@supabase/supabase-js": "^2.43.4",
     "axios": "^1.7.2",
     "dotenv": "^16.4.5",
     "firebase": "^10.10.0",

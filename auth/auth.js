@@ -1,30 +1,31 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import {
-  getAuth,
-  onAuthStateChanged,
-} from "firebase/auth";
+import { createClient } from "@supabase/supabase-js";
 
-export const firebaseConfig = {
-  apiKey: "AIzaSyDUyxOcW-qb4vWLK7TUlyY1pExaHRnM5aE",
-  authDomain: "project-scissor.firebaseapp.com",
-  projectId: "project-scissor",
-  storageBucket: "project-scissor.appspot.com",
-  messagingSenderId: "160465875577",
-  appId: "1:160465875577:web:007b18d3429e0c349bdaa8",
-  measurementId: "G-8VLJ958LRR",
-};
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL;
+const supabaseKey = import.meta.env.VITE_SUPABASE_API_KEY;
+const supabase = createClient(supabaseUrl, supabaseKey);
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const auth = getAuth(app);
+async function checkAuthState() {
+  const { data, error } = await supabase.auth.getSession();
+  if (error) {
+    console.error("Error fetching session:", error);
+  } else if (data.session) {
+      console.log("User is signed in:", data.session.user);
+    } else {
+      console.log("No user is signed in");
+    }
+}
 
-onAuthStateChanged(auth, (user) => {
-  if (user) {
-    console.log("user logged in:", user.email)
-  } else {
-    console.log("user signed out");
-  }
-});
+checkAuthState();
+
+// supabase.auth.onAuthStateChange((event, session) => {
+//   if (event === 'SIGNED_IN' || event === 'SIGNED_UP') {
+//     console.log('User signed in:', session.user);
+//     window.location.href = "/dashboard/home.html";
+//   } else if (event === 'SIGNED_OUT') {
+//     console.log('User signed out');
+//     window.location.href = "/login.html";
+//   }
+// });
+
+
+export default supabase;
