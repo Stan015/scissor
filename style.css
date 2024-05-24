@@ -120,7 +120,7 @@ nav ul li a {
   margin-left: 0.5rem;
   justify-content: center;
   align-items: center;
-  background-image: url(icons/chevron_down.svg);
+  background-image: url(/icons/chevron_down.svg);
   background-position: center;
 }
 
@@ -186,7 +186,7 @@ nav ul li a {
   content: " ";
   width: 10rem;
   height: 1.5rem;
-  background-image: url(images/brushed_line.svg);
+  background-image: url(/images/brushed_line.svg);
   background-repeat: no-repeat;
   background-position: center;
   position: relative;
@@ -617,12 +617,12 @@ main .third_section {
   content: " ";
   width: 1.5rem;
   height: 1.5rem;
-  background-image: url(icons/check_circle_blue.svg);
+  background-image: url(/icons/check_circle_blue.svg);
   background-repeat: no-repeat;
 }
 
 .price_list .professional_price ul li::before {
-  background-image: url(icons/check_circle.svg) !important;
+  background-image: url(/icons/check_circle.svg) !important;
 }
 
 .third_section .buttons_div {
@@ -677,8 +677,8 @@ main .third_section {
   width: 35rem;
   height: 100%;
   position: absolute;
-  background-image: url(images/vector_bg_before.svg),
-    url(images/vector_bg_before2.svg), url(images/vector_bg_before3.svg);
+  background-image: url(/images/vector_bg_before.svg),
+    url(/images/vector_bg_before2.svg), url(/images/vector_bg_before3.svg);
   background-repeat: no-repeat;
   left: 0;
   top: 0;
@@ -691,8 +691,8 @@ main .third_section {
   width: 30rem;
   height: 17.5rem;
   position: absolute;
-  background-image: url(images/vector_bg_after2.svg),
-    url(images/vector_bg_after.svg);
+  background-image: url(/images/vector_bg_after2.svg),
+    url(/images/vector_bg_after.svg);
   background-position: right 0 top 9rem, right 0 bottom 0;
   background-repeat: no-repeat;
   right: 0;
@@ -927,8 +927,8 @@ main .third_section {
   position: absolute;
   left: 0;
   top: 0;
-  background-image: url(images/link_opt_bg_before.svg),
-    url(images/link_opt_bg_before2.svg), url(images/link_opt_bg_before3.svg);
+  background-image: url(/images/link_opt_bg_before.svg),
+    url(/images/link_opt_bg_before2.svg), url(/images/link_opt_bg_before3.svg);
   background-repeat: no-repeat;
 }
 
@@ -940,8 +940,8 @@ main .third_section {
   position: absolute;
   right: 0;
   bottom: 0;
-  background-image: url(images/link_opt_bg_after.svg),
-    url(images/link_opt_bg_after2.svg), url(images/link_opt_bg_after3.svg);
+  background-image: url(/images/link_opt_bg_after.svg),
+    url(/images/link_opt_bg_after2.svg), url(/images/link_opt_bg_after3.svg);
   background-position: right 0 bottom 0, right 0 bottom 0, right 0 bottom 0;
   background-repeat: no-repeat;
 }
@@ -988,8 +988,8 @@ footer::before {
   position: absolute;
   left: 0;
   bottom: 0;
-  background-image: url(images/ftr_vector1.svg), url(images/ftr_vector2.svg),
-    url(images/ftr_vector3.svg);
+  background-image: url(/images/ftr_vector1.svg), url(/images/ftr_vector2.svg),
+    url(/images/ftr_vector3.svg);
   background-repeat: no-repeat;
   background-position: left 0 bottom 0, left 0 bottom 0, left 0 bottom 0;
 }
@@ -1002,8 +1002,8 @@ footer::after {
   position: absolute;
   right: 0;
   bottom: 0;
-  background-image: url(images/ftr_vector4.svg), url(images/ftr_vector5.svg),
-    url(images/ftr_vector6.svg);
+  background-image: url(/images/ftr_vector4.svg), url(/images/ftr_vector5.svg),
+    url(/images/ftr_vector6.svg);
   background-repeat: no-repeat;
   background-position: right 0 bottom 0, right 0 bottom 0, right 0 bottom 0;
 }
