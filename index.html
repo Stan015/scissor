@@ -271,12 +271,18 @@
           <option value="">Select Domain</option>
           <option value="tinyurl.com">tinyurl.com</option>
         </select>
-        <input
-          type="text"
-          name="alias"
-          id="alias"
-          placeholder="Type Alias here"
-        />
+
+        <span class="alias-input-span">
+          <input
+            type="text"
+            name="alias"
+            id="alias"
+            placeholder="Type Alias here"
+          />
+          <p class="alias-error">
+            Enter new alias or leave field empty to generate random alias.
+          </p>
+        </span>
 
         <p class="shortened-url">Shortened URL</p>
 

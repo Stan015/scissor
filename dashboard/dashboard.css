@@ -362,7 +362,7 @@ main .container {
   grid-area: 2 / 4 / 2 / 5;
   display: grid;
   grid-template-columns: subgrid;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(5, auto);
   width: 30rem;
   height: max-content;
   background-color: rgba(50, 132, 255, 0.13);
@@ -383,10 +383,35 @@ main .container {
     color: #005ae2;
     font-size: 0.8rem;
     background-color: #f9fbfd;
+    width: 100%;
   }
 
   & input::placeholder {
     color: #005ae2;
+  }
+
+  & .alias-input-span {
+    width: 100%;
+    position: relative;
+  
+    & .alias-error {
+      display: none;
+      position: absolute;
+      font-size: 0.5rem;
+      line-height: unset;
+      text-align: center;
+      padding-inline: 0;
+      padding-block: 0;
+      color: #E61900;
+      width: 100%;
+    }
+  }
+  
+  .input-error {
+    border: 2px solid #E61900 !important;
+  }
+  .show-alias-error {
+    display: inline-block !important;
   }
 /* 
   &#url_input {

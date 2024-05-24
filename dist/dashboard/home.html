@@ -4,9 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scissor Cut Dashboard</title>
-    <script type="module" crossorigin src="/assets/auth-CXNqgBkK.js"></script>
-    <script type="module" crossorigin src="/assets/auth-logout-CIn06-93.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/auth-logout-DJBX3vcK.css">
+    <script type="module" crossorigin src="/assets/auth-C35938Yn.js"></script>
+    <script type="module" crossorigin src="/assets/auth-logout-Cx1OBAw4.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/auth-logout-C8ZbaspE.css">
   </head>
   <body>
     <header>
@@ -126,18 +126,21 @@
             placeholder="Paste url here..."
             required
           />
-          <input
-            type="text"
-            name="url-title"
-            id="url-title"
-            placeholder="Name your URL"
-          />
-          <input
-            type="text"
-            name="alias"
-            id="alias"
-            placeholder="Type Alias here"
-          />
+          <select name="domain" title="domain" id="domain">
+            <option value="">Select Domain</option>
+            <option value="tinyurl.com">tinyurl.com</option>
+          </select>
+          <span class="alias-input-span">
+            <input
+              type="text"
+              name="alias"
+              id="alias"
+              placeholder="Type Alias here"
+            />
+            <p class="alias-error">
+              Enter new alias or leave field empty to generate random alias.
+            </p>
+          </span>
           <p class="shortened-url">Shortened URL</p>
           <button type="submit" class="trim_url_button">
             Trim URL
@@ -156,80 +159,92 @@
           </div>
           <div class="link-lists">
             <div class="link-div">
-                <h6 class="link-title">Test 1:</h6>
-                <p class="s-link">https://shortened-link1</p>
-                <p class="number-of-clicks">Clicks: <span>40</span></p>
-                <div class="link-actions">
-                    <button type="button">
-                        <img src="../icons/copy-link-icon.svg" alt="copy link icon">
-                    </button>
-                    <button type="button">
-                        <img src="../icons/navigate-link.svg" alt="navigate link icon">
-                    </button>
-                    <button type="button">
-                        <img src="../icons/scan-qr-code.svg" alt="qr code icon">
-                    </button>
-                    <button type="button">
-                        <img src="../icons/share-link.svg" alt="share link icon">
-                    </button>
-                </div>
+              <h6 class="link-title">Test 1:</h6>
+              <p class="s-link">https://shortened-link1</p>
+              <p class="number-of-clicks">Clicks: <span>40</span></p>
+              <div class="link-actions">
+                <button type="button">
+                  <img src="../icons/copy-link-icon.svg" alt="copy link icon" />
+                </button>
+                <button type="button">
+                  <img
+                    src="../icons/navigate-link.svg"
+                    alt="navigate link icon"
+                  />
+                </button>
+                <button type="button">
+                  <img src="../icons/scan-qr-code.svg" alt="qr code icon" />
+                </button>
+                <button type="button">
+                  <img src="../icons/share-link.svg" alt="share link icon" />
+                </button>
+              </div>
             </div>
             <div class="link-div">
-                <h6 class="link-title">Test 2:</h6>
-                <p class="s-link">https://shortened-link2</p>
-                <p class="number-of-clicks">Clicks: <span>60</span></p>
-                <div class="link-actions">
-                    <button type="button">
-                        <img src="../icons/copy-link-icon.svg" alt="copy link icon">
-                    </button>
-                    <button type="button">
-                        <img src="../icons/navigate-link.svg" alt="navigate link icon">
-                    </button>
-                    <button type="button">
-                        <img src="../icons/scan-qr-code.svg" alt="qr code icon">
-                    </button>
-                    <button type="button">
-                        <img src="../icons/share-link.svg" alt="share link icon">
-                    </button>
-                </div>
+              <h6 class="link-title">Test 2:</h6>
+              <p class="s-link">https://shortened-link2</p>
+              <p class="number-of-clicks">Clicks: <span>60</span></p>
+              <div class="link-actions">
+                <button type="button">
+                  <img src="../icons/copy-link-icon.svg" alt="copy link icon" />
+                </button>
+                <button type="button">
+                  <img
+                    src="../icons/navigate-link.svg"
+                    alt="navigate link icon"
+                  />
+                </button>
+                <button type="button">
+                  <img src="../icons/scan-qr-code.svg" alt="qr code icon" />
+                </button>
+                <button type="button">
+                  <img src="../icons/share-link.svg" alt="share link icon" />
+                </button>
+              </div>
             </div>
             <div class="link-div">
-                <h6 class="link-title">Test 3:</h6>
-                <p class="s-link">https://shortened-link3</p>
-                <p class="number-of-clicks">Clicks: <span>100</span></p>
-                <div class="link-actions">
-                    <button type="button">
-                        <img src="../icons/copy-link-icon.svg" alt="copy link icon">
-                    </button>
-                    <button type="button">
-                        <img src="../icons/navigate-link.svg" alt="navigate link icon">
-                    </button>
-                    <button type="button">
-                        <img src="../icons/scan-qr-code.svg" alt="qr code icon">
-                    </button>
-                    <button type="button">
-                        <img src="../icons/share-link.svg" alt="share link icon">
-                    </button>
-                </div>
+              <h6 class="link-title">Test 3:</h6>
+              <p class="s-link">https://shortened-link3</p>
+              <p class="number-of-clicks">Clicks: <span>100</span></p>
+              <div class="link-actions">
+                <button type="button">
+                  <img src="../icons/copy-link-icon.svg" alt="copy link icon" />
+                </button>
+                <button type="button">
+                  <img
+                    src="../icons/navigate-link.svg"
+                    alt="navigate link icon"
+                  />
+                </button>
+                <button type="button">
+                  <img src="../icons/scan-qr-code.svg" alt="qr code icon" />
+                </button>
+                <button type="button">
+                  <img src="../icons/share-link.svg" alt="share link icon" />
+                </button>
+              </div>
             </div>
             <div class="link-div">
-                <h6 class="link-title">Test 4:</h6>
-                <p class="s-link">https://shortened-link4</p>
-                <p class="number-of-clicks">Clicks: <span>300</span></p>
-                <div class="link-actions">
-                    <button type="button">
-                        <img src="../icons/copy-link-icon.svg" alt="copy link icon">
-                    </button>
-                    <button type="button">
-                        <img src="../icons/navigate-link.svg" alt="navigate link icon">
-                    </button>
-                    <button type="button">
-                        <img src="../icons/scan-qr-code.svg" alt="qr code icon">
-                    </button>
-                    <button type="button">
-                        <img src="../icons/share-link.svg" alt="share link icon">
-                    </button>
-                </div>
+              <h6 class="link-title">Test 4:</h6>
+              <p class="s-link">https://shortened-link4</p>
+              <p class="number-of-clicks">Clicks: <span>300</span></p>
+              <div class="link-actions">
+                <button type="button">
+                  <img src="../icons/copy-link-icon.svg" alt="copy link icon" />
+                </button>
+                <button type="button">
+                  <img
+                    src="../icons/navigate-link.svg"
+                    alt="navigate link icon"
+                  />
+                </button>
+                <button type="button">
+                  <img src="../icons/scan-qr-code.svg" alt="qr code icon" />
+                </button>
+                <button type="button">
+                  <img src="../icons/share-link.svg" alt="share link icon" />
+                </button>
+              </div>
             </div>
           </div>
         </section>

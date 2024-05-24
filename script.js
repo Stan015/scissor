@@ -209,11 +209,15 @@ async function shortenURL(link, domain = "tinyurl.com", alias = "") {
       }
     );
 
-    // console.log(response.data.data.alias);
-
     shortenedURL.innerText = response.data.data.tiny_url;
     return response.data.data;
   } catch (error) {
+    if (error.message == "Request failed with status code 422") {
+      const aliasErrorDisplay = urlShortenerForm.querySelector(".alias-error");
+
+      aliasErrorDisplay.classList.add("show-alias-error");
+      linkAliasInput.classList.add("input-error");
+    }
     console.log(error.message);
   }
 }

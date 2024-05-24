@@ -4,15 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Scissor url</title>
+    <meta
+      name="description"
+      content="Sciccor Cut: a URL shortener with mind-blowing features. Try for free."
+    />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="/assets/auth-CXNqgBkK.js"></script>
-    <script type="module" crossorigin src="/assets/script-DWkIQ2HG.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/script-DztC0JZg.css">
+    <script type="module" crossorigin src="/assets/auth-C35938Yn.js"></script>
+    <script type="module" crossorigin src="/assets/script-Ck4EPaoA.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/script-a0VtA7Mm.css">
   </head>
   <body>
     <header>
@@ -23,7 +27,7 @@
 
         <nav class="primary_nav">
           <ul>
-            <li><a href="#" class="my_url_a">My URLs</a></li>
+            <li><a href="login.html" class="my_url_a">My URLs</a></li>
             <li><a href="#features" class="features">Features</a></li>
             <li><a href="#pricing">Pricing</a></li>
             <li><a href="#">Analytics</a></li>
@@ -265,18 +269,22 @@
           placeholder="Paste url here..."
           required
         />
-        <input
-          type="text"
-          name="url-title"
-          id="url-title"
-          placeholder="Name your URL"
-        />
-        <input
-          type="text"
-          name="alias"
-          id="alias"
-          placeholder="Type Alias here"
-        />
+        <select name="domain" title="domain" id="domain">
+          <option value="">Select Domain</option>
+          <option value="tinyurl.com">tinyurl.com</option>
+        </select>
+
+        <span class="alias-input-span">
+          <input
+            type="text"
+            name="alias"
+            id="alias"
+            placeholder="Type Alias here"
+          />
+          <p class="alias-error">
+            Enter new alias or leave field empty to generate random alias.
+          </p>
+        </span>
 
         <p class="shortened-url">Shortened URL</p>
 

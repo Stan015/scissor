@@ -703,7 +703,7 @@ main .third_section {
 #url_shortener_form {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  grid-template-rows: repeat(5, 1fr);
+  grid-template-rows: repeat(5, auto);
   width: 30rem;
   height: max-content;
   background-color: #ffffff;
@@ -725,6 +725,30 @@ main .third_section {
   color: #005ae2;
   font-size: 0.8rem;
   background-color: #ffffff;
+  width: 100%;
+}
+
+#url_shortener_form .alias-input-span {
+  width: 100%;
+  position: relative;
+
+  & .alias-error {
+    display: none;
+    position: absolute;
+    font-size: 0.5rem;
+    line-height: unset;
+    text-align: center;
+    padding-inline: 0;
+    padding-block: 0;
+    color: #E61900;
+  }
+}
+
+.input-error {
+  border: 2px solid #E61900 !important;
+}
+.show-alias-error {
+  display: inline-block !important;
 }
 
 #url_shortener_form input::placeholder {
@@ -759,6 +783,7 @@ main .third_section {
   font-size: 0.9rem;
   color: #005ae2;
   padding: 0 1rem;
+  text-align: center;
 }
 
 .terms_of_service a {
@@ -1451,7 +1476,7 @@ footer::after {
   #url_shortener_form {
     margin: 0 5%;
     width: 18rem;
-    gap: 1rem;
+    gap: 1.2rem;
     padding: 1rem;
     grid-template-columns: 7.5rem 7.5rem;
   }
